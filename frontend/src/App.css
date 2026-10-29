@@ -1,0 +1,340 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f7fb;
+  color: #202a3b;
+}
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.app-shell .sidebar {
+  width: 235px;
+  min-height: 100vh;
+  padding: 30px 18px;
+  background: #17243b;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.app-shell .sidebar h2 {
+  font-size: 25px;
+  margin: 0 0 42px;
+}
+
+.app-shell .sidebar h2 span {
+  color: #70d7bd;
+}
+
+.sidebar-label {
+  color: #9caac0;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  padding-left: 12px;
+}
+
+.app-shell .nav-item {
+  padding: 13px 12px;
+  margin: 5px 0;
+  color: #d4dceb;
+  border-radius: 8px;
+}
+
+.app-shell .nav-item.active {
+  background: #304563;
+  color: white;
+}
+
+.sidebar-note {
+  margin-top: auto;
+  padding-top: 30px;
+  color: #aab6c8;
+  font-size: 12px;
+}
+
+.app-shell .main-content {
+  flex: 1;
+  min-width: 0;
+  padding: 30px;
+}
+
+.app-shell .topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.app-shell .topbar h1 {
+  font-size: 29px;
+  margin: 0 0 7px;
+}
+
+.app-shell .topbar p,
+.app-shell .panel-heading p {
+  color: #778399;
+  margin: 0;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #d9f4ec;
+  color: #167c65;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+}
+
+.app-shell .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.app-shell .stat-card,
+.app-shell .panel {
+  background: white;
+  border: 1px solid #e7ebf2;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(23, 36, 59, 0.05);
+}
+
+.app-shell .stat-card {
+  padding: 22px;
+}
+
+.app-shell .stat-card p {
+  color: #778399;
+  margin: 0 0 12px;
+}
+
+.app-shell .stat-card h2 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.app-shell .panel {
+  padding: 24px;
+  margin-bottom: 22px;
+}
+
+.app-shell .panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.app-shell .panel-heading h2 {
+  font-size: 20px;
+  margin: 0 0 7px;
+}
+
+.app-shell .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.app-shell .form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.app-shell .form-grid input,
+.app-shell .toolbar input,
+.app-shell .toolbar select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #dce2ec;
+  border-radius: 7px;
+  background: white;
+  color: #202a3b;
+}
+
+.app-shell .form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.app-shell .btn-primary,
+.app-shell .btn-secondary,
+.app-shell .edit-btn,
+.app-shell .delete-btn {
+  border: none;
+  border-radius: 7px;
+  padding: 10px 15px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.app-shell .btn-primary {
+  background: #2869dc;
+  color: white;
+}
+
+.app-shell .btn-secondary {
+  background: #edf1f7;
+  color: #354258;
+}
+
+.app-shell .edit-btn {
+  background: #e9f1ff;
+  color: #245ac0;
+}
+
+.app-shell .delete-btn {
+  background: #fff0ef;
+  color: #c23f3a;
+}
+
+.app-shell .toolbar {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.app-shell .table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.app-shell table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.app-shell th {
+  background: #f7f9fc;
+  color: #778399;
+  padding: 14px 12px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.app-shell td {
+  padding: 15px 12px;
+  border-bottom: 1px solid #edf0f5;
+  font-size: 13px;
+}
+
+.app-shell td strong,
+.app-shell td small {
+  display: block;
+}
+
+.app-shell td small {
+  margin-top: 5px;
+  color: #778399;
+}
+
+.department-badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #eaf7f2;
+  color: #18765c;
+}
+
+.app-shell .action-buttons {
+  display: flex;
+  gap: 7px;
+}
+
+.app-shell .empty-state {
+  text-align: center;
+  color: #778399;
+  padding: 28px 10px;
+}
+
+.app-shell .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.app-shell .pagination > div {
+  display: flex;
+  gap: 8px;
+}
+
+.app-shell .footer {
+  padding: 10px;
+  text-align: center;
+  color: #8893a5;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .app-shell .sidebar {
+    width: 190px;
+  }
+
+  .app-shell .main-content {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 650px) {
+  .app-shell {
+    display: block;
+  }
+
+  .app-shell .sidebar {
+    width: 100%;
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .app-shell .sidebar h2 {
+    margin-bottom: 12px;
+  }
+
+  .app-shell .sidebar-label,
+  .app-shell .sidebar-note {
+    display: none;
+  }
+
+  .app-shell .nav-item {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .app-shell .main-content {
+    padding: 14px;
+  }
+
+  .app-shell .stats-grid,
+  .app-shell .form-grid,
+  .app-shell .toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .app-shell .panel {
+    padding: 16px;
+  }
+}
